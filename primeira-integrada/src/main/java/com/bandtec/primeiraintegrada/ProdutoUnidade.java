@@ -3,25 +3,25 @@ package com.bandtec.primeiraintegrada;
 public class ProdutoUnidade extends Produto {
 
     private Integer quantidadeUni;
-    private Double preçoUni;
+    private Double precoUni;
 
-    public ProdutoUnidade(Integer codigo, String nome, String fabricante, Integer quantidadeUni, Double preçoUni) {
+    public ProdutoUnidade(Integer codigo, String nome, String fabricante, Integer quantidadeUni, Double precoUni) {
         super(codigo, nome, fabricante);
         this.quantidadeUni = quantidadeUni;
-        this.preçoUni = preçoUni;
+        this.precoUni = precoUni;
     }
 
     @Override
     public Double calcularPreco() {
-        return quantidadeUni * preçoUni;
+        return quantidadeUni * precoUni;
     }
 
     @Override
     public String toString() {
-        return "ProdutoUnidade{" +
-                "quantidadeUni=" + quantidadeUni +
-                ", preçoUni=" + preçoUni + calcularPreco() +
-                "} " + super.toString();
+        return super.toString() +
+                " | Quantidade (Un.): " + quantidadeUni +
+                " | Preço (Un.): R$" + precoUni +
+                "\nTotal: R$" + calcularPreco();
     }
 
     public Integer getQuantidadeUni() {
@@ -33,10 +33,10 @@ public class ProdutoUnidade extends Produto {
     }
 
     public Double getPreçoUni() {
-        return preçoUni;
+        return precoUni;
     }
 
     public void setPreçoUni(Double preçoUni) {
-        this.preçoUni = preçoUni;
+        this.precoUni = preçoUni;
     }
 }

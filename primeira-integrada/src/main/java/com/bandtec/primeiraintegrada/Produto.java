@@ -16,11 +16,10 @@ public abstract class Produto {
 
     @Override
     public String toString() {
-        return "Produto{" +
-                "codigo=" + codigo +
-                ", nome='" + nome + '\'' +
-                ", fabricante='" + fabricante + '\'' +
-                '}';
+        return "-- Produto\n" +
+                "Código: " + codigo +
+                " | Nome: " + nome +
+                " | Fabricante: " + fabricante;
     }
 
     public Integer getCodigo() {

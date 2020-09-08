@@ -18,10 +18,10 @@ public class ProdutoPeso extends Produto {
 
     @Override
     public String toString() {
-        return "ProdutoPeso{" +
-                "quantidadeGrama=" + quantidadeGrama +
-                ", precoKilo=" + precoKilo + calcularPreco() +
-                "} " + super.toString();
+        return super.toString() +
+                " | Quantidade (g): " + quantidadeGrama +
+                " | Preço (Kg): R$" + precoKilo +
+                "\nTotal: R$" + calcularPreco();
     }
 
     public Double getQuantidadeGrama() {
