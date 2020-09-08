@@ -1,0 +1,42 @@
+package com.bandtec.primeiraintegrada;
+
+public class ProdutoPeso extends Produto {
+
+    private Double quantidadeGrama;
+    private Double precoKilo;
+
+    public ProdutoPeso(Integer codigo, String nome, String fabricante, Double quantidadeGrama, Double precoKilo) {
+        super(codigo, nome, fabricante);
+        this.quantidadeGrama = quantidadeGrama;
+        this.precoKilo = precoKilo;
+    }
+
+    @Override
+    public Double calcularPreco() {
+        return quantidadeGrama * precoKilo / 1000;
+    }
+
+    @Override
+    public String toString() {
+        return "ProdutoPeso{" +
+                "quantidadeGrama=" + quantidadeGrama +
+                ", precoKilo=" + precoKilo + calcularPreco() +
+                "} " + super.toString();
+    }
+
+    public Double getQuantidadeGrama() {
+        return quantidadeGrama;
+    }
+
+    public void setQuantidadeGrama(Double quantidadeGrama) {
+        this.quantidadeGrama = quantidadeGrama;
+    }
+
+    public Double getPrecoKilo() {
+        return precoKilo;
+    }
+
+    public void setPrecoKilo(Double precoKilo) {
+        this.precoKilo = precoKilo;
+    }
+}
